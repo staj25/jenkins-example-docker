@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    any
+    docker { image 'nginx' }
   }
   stages {
     stage('Test') {
       steps {
-        sh 'node --version'
+        sh 'ls'
       }
     }
   }
